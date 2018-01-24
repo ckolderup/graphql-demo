@@ -1,0 +1,9 @@
+<ul id="pokemons">
+  {{#each pokemon}}
+    <li>
+      <a href="/{{this.id}}">
+        {{this.number}} - {{this.name}}
+      </a>
+    </li>
+  {{/each}}
+</ul>

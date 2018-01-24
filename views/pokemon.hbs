@@ -1,0 +1,34 @@
+<div class="nav"><a href="/">⟸ Back</a></div>
+
+<img src="{{pokemon.image}}"/>
+
+<dt>Name</dt>
+<dd>{{pokemon.name}}</dd>
+
+<dt>Classification</dt>
+<dd>{{pokemon.classification}}</dd>
+
+<dt>Types</dt>
+<dd>{{pokemon.types}}</dd>
+
+<dt>Weight</dt>
+<dd>{{pokemon.weight.minimum}}-{{pokemon.weight.maximum}}</dd>
+
+<dt>Height</dt>
+<dd>{{pokemon.height.minimum}}-{{pokemon.height.maximum}}</dd>
+
+<dt>Resistant</dt>
+<dd>{{pokemon.resistant}}</dd>
+
+<dt>Weaknesses</dt>
+<dd>{{pokemon.weaknesses}}</dd>
+
+<dt>Attacks</dt>
+<dd><ul>{{#each pokemon.attacks.special}}
+  <li>{{this.name}}</li>
+{{/each}}</ul></dd>
+
+<dt>Evolutions</dt>
+<dd><ul>{{#each pokemon.evolutions}}
+  <li><a href="/{{this.id}}">{{this.name}}</a></li>
+{{/each}}</ul></dd>
