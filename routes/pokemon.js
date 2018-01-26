@@ -29,7 +29,7 @@ router.get('/:id', async function(req, res, next) {
   try {
     var data = await graphqlQuery(POKEMON_QUERY, {id: req.params.id});
 // TODO 4: feed the data for a Pokemon into the view and edit view/pokemon.hbs
-    res.render('pokemon', {pokemon: undefined, title: `Pokedex - ${}`});
+    res.render('pokemon', {pokemon: undefined, title: `Pokedex - ${undefined}`});
   } catch(err) {
     res.status(500).send({error: err});
   }
